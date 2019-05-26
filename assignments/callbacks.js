@@ -59,10 +59,15 @@ multiplyNums(5, 10, product => {
   console.log(product);
 });
 
-function contains(item, list, cb) {
+const contains = (item, list, cb) => {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+  return cb(list.includes(item));
+};
+
+contains("Gum", items, result => {
+  console.log(result);
+});
 
 /* STRETCH PROBLEM */
 
